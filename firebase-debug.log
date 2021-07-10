@@ -1,0 +1,36 @@
+[debug] [2021-07-10T07:42:05.963Z] ----------------------------------------------------------------------
+[debug] [2021-07-10T07:42:05.981Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Hasnat Amin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-07-10T07:42:05.982Z] CLI Version:   9.16.0
+[debug] [2021-07-10T07:42:05.982Z] Platform:      win32
+[debug] [2021-07-10T07:42:05.982Z] Node Version:  v14.15.1
+[debug] [2021-07-10T07:42:06.103Z] Time:          Sat Jul 10 2021 12:42:05 GMT+0500 (Pakistan Standard Time)
+[debug] [2021-07-10T07:42:06.104Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-07-10T07:42:06.312Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-10T07:42:06.312Z] > authorizing via signed-in user (hasnatamin708@gmail.com)
+[debug] [2021-07-10T07:42:06.313Z] [iam] checking project notificationexpenseapp for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-07-10T07:42:06.317Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/notificationexpenseapp:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-07-10T07:42:06.565Z] [iam] error while checking permissions, command may fail: FirebaseError: Server Error. getaddrinfo ENOTFOUND cloudresourcemanager.googleapis.com
+[debug] [2021-07-10T07:42:06.567Z] > refreshing access token with scopes: []
+[debug] [2021-07-10T07:42:06.568Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-10T07:42:06.584Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-07-10T07:42:06.605Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\Hasnat Amin\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:141:12)
+    at refreshTokens (C:\Users\Hasnat Amin\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:448:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Client.getAccessToken (C:\Users\Hasnat Amin\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:144:23)
+    at async Client.addAuthHeader (C:\Users\Hasnat Amin\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:135:21)
+    at async Client.request (C:\Users\Hasnat Amin\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:93:34)
+    at async Object.getFirebaseProject (C:\Users\Hasnat Amin\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\Hasnat Amin\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\Hasnat Amin\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\Hasnat Amin\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:65:9)
+    at async C:\Users\Hasnat Amin\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:169:17
+[error] 
+[error] Error: Failed to get Firebase project notificationexpenseapp. Please make sure the project exists and your account has permission to access it.
